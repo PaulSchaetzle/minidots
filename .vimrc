@@ -68,30 +68,9 @@ filetype plugin on
 autocmd CmdlineEnter * :set norelativenumber | redraw
 autocmd CmdlineLeave * :set relativenumber
 
-" VimPlug
-call plug#begin('/home/paul/.vim/plugged')
-    Plug 'lervag/vimtex'
-    let g:tex_flavor ='latex'
-    let g:vimtex_view_method = 'zathura'
-    let g:vimtex_quickfix_mode=0
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'vim-airline/vim-airline'
-    let g:airline_powerline_fonts = 0
-    let g:airline#extensions#tabline#enabled = 1
-    Plug 'gruvbox-community/gruvbox'
-    let g:gruvbox_contrast_dark = 'hard'
-    Plug 'NLKNguyen/papercolor-theme'
-call plug#end()
-
 " File Browsing
 let g:netrw_banner=0
 let g:netrw_altv=1
 let g:netrw_liststyle=3
 
 set background=light
-colorscheme PaperColor
-
-" start vim server needed for vimtex
-if empty(v:servername) && exists('*remote_startserver')
-    call remote_startserver('VIM')
-endif

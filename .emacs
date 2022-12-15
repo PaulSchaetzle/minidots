@@ -52,12 +52,6 @@
 	("C-x t t" . treemacs)
 	("C-x t /" . treemacs-find-file)))
 	
-;; IDE Like features
-;; (use-package projectile
-;;   :ensure t
-;;   :bind-keymap
-;;   ("C-c p" . projectile-command-map))
-
 (use-package flycheck
   :ensure t)
 
@@ -95,9 +89,6 @@
   :config
   (add-hook 'java-mode-hook 'lsp)
   (setq lsp-java-format-on-type-enabled nil))
-
-(use-package lsp-treemacs
-  :ensure t)
 
 (use-package which-key
   :ensure t

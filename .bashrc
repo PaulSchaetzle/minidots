@@ -6,15 +6,11 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias :q="exit"
-alias clr="clear"
-
 alias l="ls --color=auto"
 alias ls="ls --color=auto"
 alias la="ls -a --color=auto"
 alias ll="ls -l --color=auto"
 
-alias v="vim"
 alias grep="grep --color=auto"
 alias ytm="yt-dlp -x --audio-format mp3 --add-metadata --embed-thumbnail"
 
@@ -23,4 +19,10 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 
 # Prompt
-PS1='\[\e[35\];1m\342\224\214\342\224\200\u\[\e[0;1m\]@\[\e[36;1m\]\h\[\e[34;1m\][\w]\n\[\e[35;1m\]\342\224\224\342\224\200\342\224\200>\[\e[0m\]\$ '
+
+if [ -f /usr/lib/git-core/git-sh-prompt ]; then
+    source /usr/lib/git-core/git-sh-prompt
+    PS1='\[\e[35\];1m\u\[\e[0;1m\]: \[\e[34;1m\]\w\[\e[32;1m\]$(__git_ps1) \[\e[0m\]\$ '
+else
+    PS1='\[\e[35\];1m\u\[\e[0;1m\]: \[\e[34;1m\]\w \$ '
+fi
