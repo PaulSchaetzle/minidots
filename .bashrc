@@ -25,9 +25,16 @@ export SVN_EDITOR=vim
 export EDITOR=vim
 
 # Prompt
+# Script Location on Ubuntu
 if [ -f /usr/lib/git-core/git-sh-prompt ]; then
     source /usr/lib/git-core/git-sh-prompt
     git_prompt="true"
+else
+    # Script Location on Arch Linux
+    if [ -f /usr/share/git/git-prompt.sh ]; then
+        source /usr/share/git/git-prompt.sh
+        git_prompt="true"
+    fi
 fi
 
 if [ -n "$git_prompt" ]; then
