@@ -31,14 +31,14 @@ if [ -f /usr/lib/git-core/git-sh-prompt ]; then
     git_prompt="true"
 else
     # Script Location on Arch Linux
-    if [ -f /usr/share/git/git-prompt.sh ]; then
-        source /usr/share/git/git-prompt.sh
+    if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+        source /usr/share/git/completion/git-prompt.sh
         git_prompt="true"
     fi
 fi
 
 if [ -n "$git_prompt" ]; then
-    PS1='\[\e[35\];1m\u\[\e[0;1m\]: \[\e[34;1m\]\w\[\e[32;1m\]$(__git_ps1) \[\e[0m\]\$ '
+    PS1='\[\e[35;1m\]\u\[\e[0;1m\]: \[\e[34;1m\]\w\[\e[32;1m\]$(__git_ps1) \[\e[0m\]\$ '
 else
-    PS1='\[\e[35\];1m\u\[\e[0;1m\]: \[\e[34;1m\]\w \[\e[0m\]\$ '
+    PS1='\[\e[35;1m\]\u\[\e[0;1m\]: \[\e[34;1m\]\w \[\e[0m\]\$ '
 fi
