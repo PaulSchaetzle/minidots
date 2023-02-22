@@ -9,7 +9,7 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
-HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open ."
+HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
 
 # Aliases
 alias l="ls --color=auto"
