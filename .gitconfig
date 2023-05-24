@@ -1,0 +1,9 @@
+[user]
+	name = Paul Schaetzle
+	email = paulschaetzle@mailbox.org
+[merge]
+	tool = meld
+[credential]
+	helper = cache --timeout=3600
+[push]
+	autoSetupRemote = true
