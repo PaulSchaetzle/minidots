@@ -11,15 +11,6 @@ HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
 HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
 
-# Aliases
-alias l="ls --color=auto"
-alias ls="ls --color=auto"
-alias la="ls -a --color=auto"
-alias ll="ls -l --color=auto"
-
-alias grep="grep --color=auto"
-alias ytm="yt-dlp -x --audio-format mp3 --add-metadata --embed-thumbnail"
-
 # Variables
 export SVN_EDITOR=vim
 export EDITOR=vim
@@ -41,4 +32,14 @@ if [ -n "$git_prompt" ]; then
     PS1='\[\e[35;1m\]\u\[\e[0;1m\]@\[\e[36;1m\]\h\[\e[0;1m\]: \[\e[34;1m\]\w\[\e[32;1m\]$(__git_ps1) \[\e[0m\]\$ '
 else
     PS1='\[\e[35;1m\]\u\[\e[0;1m\]@\[\e[36;1m\]\h\[\e[0;1m\]: \[\e[34;1m\]\w \[\e[0m\]\$ '
+fi
+
+# Aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Start TMUX and attach to a session if one exists
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux new-session -A -s main
 fi
