@@ -11,6 +11,9 @@ HISTFILESIZE=2000
 HISTCONTROL=ignoreboth
 HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
 
+# Only show 3 dir names in prompt
+PROMPT_DIRTRIM=3
+
 # Variables
 export SVN_EDITOR=vim
 export EDITOR=vim

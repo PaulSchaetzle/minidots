@@ -41,17 +41,21 @@ set ttimeoutlen=0
 set mouse=a "enable mouse
 set ttymouse=sgr "workaround to make mouse work in terminal
 
-syntax on
-filetype plugin on
-
 " Autocommands
 " Switch between relative numbers and normal numbers when entering Command Mode
 autocmd CmdlineEnter * :set norelativenumber | redraw
 autocmd CmdlineLeave * :set relativenumber
 
+" Plugins
+syntax on
+filetype plugin on
+
 " File Browsing
 let g:netrw_banner=0
-let g:netrw_altv=1
+" let g:netrw_altv=1
+let g:netrw_keepdir = 0
+let g:netrw_localcopydircmd = 'cp -r'
 let g:netrw_liststyle=3
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 set background=light
