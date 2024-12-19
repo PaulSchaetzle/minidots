@@ -17,6 +17,7 @@ PROMPT_DIRTRIM=3
 # Variables
 export SVN_EDITOR=vim
 export EDITOR=vim
+export COLORTERM=truecolor
 
 # Prompt
 # Script Location on Ubuntu
