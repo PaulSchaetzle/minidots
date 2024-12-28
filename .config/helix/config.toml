@@ -2,3 +2,7 @@ theme = "modus_operandi"
 
 [editor]
 line-number = "relative"
+
+[keys.normal]
+"$"= "goto_line_end"
+"0" = "goto_line_start"
