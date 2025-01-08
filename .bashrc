@@ -45,5 +45,5 @@ fi
 
 # Start TMUX and attach to a session if one exists
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux new-session -A -s main
+    tmux new-session -d -s main; tmux new-session -t main \; set-option destroy-unattached
 fi
