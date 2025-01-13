@@ -1,0 +1,4 @@
+[[language]]
+name = "c"
+formatter = { command = "clang-format --style=file" }
+auto-format = true

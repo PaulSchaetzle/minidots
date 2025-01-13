@@ -4,6 +4,9 @@ theme = "modus_operandi"
 line-number = "relative"
 jump-label-alphabet = "tnseriaodhgmblpufycvkwxzjq"
 
+[editor.cursor-shape]
+insert = "bar"
+
 [keys.normal]
 "$"= "goto_line_end"
 "0" = "goto_line_start"
