@@ -2,6 +2,7 @@ theme = "modus_operandi"
 
 [editor]
 line-number = "relative"
+jump-label-alphabet = "tnseriaodhgmblpufycvkwxzjq"
 
 [keys.normal]
 "$"= "goto_line_end"
