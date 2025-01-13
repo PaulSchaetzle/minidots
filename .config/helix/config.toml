@@ -6,3 +6,6 @@ line-number = "relative"
 [keys.normal]
 "$"= "goto_line_end"
 "0" = "goto_line_start"
+"ret" = "goto_word"
+# C-u = ["page_cursor_half_up", "align_view_center"]
+# C-d = ["page_cursor_half_down", "align_view_center"]
