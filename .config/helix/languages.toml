@@ -1,4 +1,4 @@
 [[language]]
 name = "c"
-formatter = { command = "clang-format --style=file" }
+formatter = { command = "clang-format", args = ["--style=file"] }
 auto-format = true

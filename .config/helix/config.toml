@@ -3,6 +3,8 @@ theme = "modus_operandi"
 [editor]
 line-number = "relative"
 jump-label-alphabet = "tnseriaodhgmblpufycvkwxzjq"
+rulers = [80, 100]
+auto-format = true
 
 [editor.cursor-shape]
 insert = "bar"
