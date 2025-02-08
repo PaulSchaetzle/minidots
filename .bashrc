@@ -6,13 +6,13 @@
 [[ $- != *i* ]] && return
 
 # History 
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=ignoreboth
-HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+export HISTCONTROL=ignoreboth,erasedups
+export HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
 
 # Only show 3 dir names in prompt
-PROMPT_DIRTRIM=3
+export PROMPT_DIRTRIM=3
 
 # Variables
 export SVN_EDITOR=vim
