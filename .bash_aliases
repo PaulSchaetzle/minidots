@@ -5,4 +5,6 @@ alias la="ls -a --color=auto"
 alias ll="ls -l --color=auto"
 
 alias grep="grep --color=auto"
-alias ytm="yt-dlp -x --audio-format mp3 --add-metadata --embed-thumbnail"
+alias ytm="yt-dlp -x --audio-format opus --add-metadata --embed-thumbnail"
+
+alias hx="helix"
