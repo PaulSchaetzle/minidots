@@ -10,6 +10,8 @@ export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTCONTROL=ignoreboth,erasedups
 export HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
+shopt -s histappend
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Only show 3 dir names in prompt
 export PROMPT_DIRTRIM=3
