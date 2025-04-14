@@ -6,11 +6,13 @@
 [[ $- != *i* ]] && return
 
 # History 
+shopt -s histappend
+# Unlimited history size
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 export HISTCONTROL=ignoreboth,erasedups
 export HISTIGNORE="history:?:??:exit:sudo pacman -Syyu:sudo apt update && sudo apt update:open .:?? .."
-shopt -s histappend
+# Append to history on each command
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Only show 3 dir names in prompt
@@ -29,13 +31,19 @@ else
 fi
 
 # Aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+alias l="ls --color=auto"
+alias ls="ls --color=auto"
+alias la="ls -a --color=auto"
+alias ll="ls -l --color=auto"
+alias grep="grep --color=auto"
+alias ytm="yt-dlp -x --audio-format opus --add-metadata --embed-thumbnail"
 
 # Start TMUX and attach to a session if one exists
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     tmux new-session -d -s main; tmux new-session -t main \; set-option destroy-unattached
 fi
 
-eval "$(direnv hook bash)"
+# Only use direnv if it is installed
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook bash)"
+fi
