@@ -4,10 +4,11 @@ theme = "modus_operandi"
 line-number = "relative"
 jump-label-alphabet = "tnseriaodhgmblpufycvkwxzjq"
 rulers = [80, 100]
-auto-format = true
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
