@@ -1,0 +1,10 @@
+# Git files
+!.gitignore
+!.gitattributes
+
+# GitLab CI files
+!.gitlab-ci.yaml
+!.gitlab-ci.yml
+
+# GitHub workflows
+!.github/
