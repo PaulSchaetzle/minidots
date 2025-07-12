@@ -1,0 +1,34 @@
+[credential]
+	helper = store
+
+[init]
+	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[core]
+	pager = delta
+	excludeFile = ~/.gitignore
+
+[delta]
+	navigate = true  # use n and N to move between diff sections
+
+[merge]
+	conflictstyle = zdiff3
+
+[pull]
+	ff = only
+
+[push]
+	autoSetupRemote = true
+
+[rebase]
+	autoSqash = true
+	autoStash = true
+	rebaseMerges = true
+	updateRefs = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
