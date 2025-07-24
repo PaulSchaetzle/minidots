@@ -43,11 +43,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     tmux new-session -d -s main; tmux new-session -t main \; set-option destroy-unattached
 fi
 
-# Only use direnv if it is installed
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook bash)"
 fi
 
 if [ -f "$HOME/.cargo/env" ]; then
     . "$HOME/.cargo/env"
+fi
+
+if command -v jj &> /dev/null; then
+    source <(jj util completion bash)
 fi
