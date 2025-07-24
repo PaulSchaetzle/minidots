@@ -2,15 +2,9 @@
 name = "c"
 formatter = { command = "clang-format", args = ["--style=file"] }
 auto-format = true
+rulers = [80, 100]
 
 [[language]]
 name = "devicetree"
-scope = "source.devicetree"
 injection-regex = "(dtsi?|devicetree|fdt)"
 file-types = ["dts", "dtsi", "overlay"]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-indent = { tab-width = 4, unit = "\t" }
-
-[language-server]
-clangd = { command = "clangd", args = [ "--clang-tidy" ] }

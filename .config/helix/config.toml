@@ -4,6 +4,8 @@ theme = "modus_operandi"
 line-number = "relative"
 jump-label-alphabet = "tnseriaodhgmblpufycvkwxzjq"
 rulers = [80, 100]
+rainbow-brackets = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
