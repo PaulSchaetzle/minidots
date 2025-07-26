@@ -47,4 +47,7 @@ fi
 if command -v direnv &> /dev/null; then
     eval "$(direnv hook bash)"
 fi
-. "$HOME/.cargo/env"
+
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
