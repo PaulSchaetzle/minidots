@@ -1,0 +1,23 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Paul Schaetzle"
+email = "pschaetzle@testo.de"
+
+[templates]
+commit_trailers = '''
+format_signed_off_by_trailer(self)'''
+
+[diff]
+tool = "delta"
+
+[ui]
+diff-formatter = ":git" # required by `delta`
+pager=["delta", "--pager", "less -FRX"] # Keeps output from the terminal after closing the pager
+
+# These options allow for `jj diff` and `jj show` to clear the output from the terminal after closing the pager.
+[[--scope]]
+--when.commands = ["diff", "show"]
+
+[--scope.ui]
+pager = "delta"

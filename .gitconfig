@@ -1,5 +1,23 @@
+[alias]
+	st = status --short
+	co = checkout
+	ci = commit
+	br = branch
+	rst = reset
+	rvt = revert
+	rb = rebase
+	rbi = rebase -i
+	graph = log --graph --branches --pretty=format:'%C(bold blue)%h%C(reset) %C(dim white)(%ar)%C(reset) %C(bold green)%an%C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset)%n'
+	sw = switch
+
+[branch]
+	sort = -committerdate
+
 [credential]
 	helper = store
+
+[column]
+	ui = auto
 
 [init]
 	defaultBranch = main
@@ -9,7 +27,7 @@
 
 [core]
 	pager = delta
-	excludeFile = ~/.gitignore
+	excludesFile = ~/.gitignore
 
 [delta]
 	navigate = true  # use n and N to move between diff sections
@@ -22,9 +40,10 @@
 
 [push]
 	autoSetupRemote = true
+	useForceIfIncludes = true
 
 [rebase]
-	autoSqash = true
+	autoSquash = true
 	autoStash = true
 	rebaseMerges = true
 	updateRefs = true
@@ -32,3 +51,6 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+
+[status]
+	branch = true
